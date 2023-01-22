@@ -15,26 +15,18 @@ import MediaPlayer          // AVPlayer()
 
 class ViewController: UIViewController {
 
-    let bfm = URL(string: "https://bfm.hostingradio.ru:8004/fm32")
+    let bfm  = URL(string: "https://bfm.hostingradio.ru:8004/fm32")
+    let alfa = URL(string: "https://radioalfa1111.blogspot.com")
+    let folkObondoru = URL(string: "https://player.europa.kg:1105/stream")
+
     var player = AVPlayer()
 
-//    private lazy var player: AVAudioPlayer = {
-//        do {
-//            let player = try AVAudioPlayer(contentsOf: bfm!)
-//            return player
-//        }
-//        catch {
-//            print("Error")
-//        }
-//        return player
-//    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
 
-        let playerItem = AVPlayerItem(url: bfm!)
-        player = AVPlayer(playerItem: playerItem)
+        player = AVPlayer(playerItem: AVPlayerItem(url: folkObondoru!))
         player.play()
     }
 }
