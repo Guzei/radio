@@ -1,6 +1,9 @@
 # radio
 listen radio onlin
 
-versin 0.1
+version 0.2
 
-testring players in swift
+Player0
+minimum code for one radio playing with simple controls
+AVPlayer()
+

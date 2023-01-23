@@ -15,7 +15,7 @@ final class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        tabBar.backgroundColor = BackgroundColors.tabBar
+        tabBar.backgroundColor = .systemGroupedBackground
 
         let ncPlayer0: UINavigationController = {
             let nc = UINavigationController()
@@ -32,6 +32,6 @@ final class TabBarController: UITabBarController {
         }()
 
         viewControllers = [ncPlayer0, ncPlayer1]
-//        selectedIndex = 1
+        selectedIndex = 1
     }
 }

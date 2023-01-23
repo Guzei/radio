@@ -2,23 +2,23 @@
 //  Player0.swift
 //  radio
 //
-//  Created by Igor Guzei on 19.01.2023.
+//  Created by Igor Guzei on 19.01.2023
 //
-// v.0.2 2023-01-22
+//  Minimum code for one radio playing with simple controls
+//  Минимальный код для востпроизведения одной радиостанции с простейшим контроллером
+//
+//  Creates a new player to play a single audiovisual resource referenced by a given URL.
+//  This method implicitly creates an AVPlayerItem object. You can get the player item using currentItem.
+//  https://developer.apple.com/documentation/avfoundation/avplayer/1385706-init
+//
+
 
 import UIKit
-//import AVFAudio
-//import Foundation
-import MediaPlayer          // AVPlayer()
-//import AVKit
-//import Kingfisher
-
+import MediaPlayer          // AVPlayer()  // An object that provides the interface to control the player’s transport behavior.
 
 class Player0: UIViewController {
 
-    // An object that provides the interface to control the player’s transport behavior.
-    // https://developer.apple.com/documentation/avfoundation/avplayer
-    var player = AVPlayer()
+    var player = AVPlayer(url: URL(string: "https://rufm.amgradio.ru/rufm")!)
 
     private lazy var svController: UIStackView = {
         $0.axis = .horizontal
@@ -32,31 +32,18 @@ class Player0: UIViewController {
         $0.addTarget(self, action: #selector(pressPlayButton), for: .touchUpInside)
         return $0
     }(UIButton())
-    @objc func pressPlayButton() {
-        player.play()
-    }
 
     private lazy var pauseButton: UIButton = {
         $0.setImage(UIImage(systemName: "pause.circle"), for: .normal)
         $0.addTarget(self, action: #selector(pressPauseButton), for: .touchUpInside)
         return $0
     }(UIButton())
-    @objc func pressPauseButton() {
-        player.pause()
-    }
 
     private lazy var stopButton: UIButton = {
         $0.setImage(UIImage(systemName: "stop.circle"), for: .normal)
         $0.addTarget(self, action: #selector(pressStopButton), for: .touchUpInside)
         return $0
     }(UIButton())
-    @objc func pressStopButton() {
-        player.replaceCurrentItem(with: nil)
-    }
-
-    let bfm  = URL(string: "https://bfm.hostingradio.ru:8004/fm32")
-    let alfa = URL(string: "https://radioalfa1111.blogspot.com")
-    let folkObondoru = URL(string: "https://player.europa.kg:1105/stream")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +59,20 @@ class Player0: UIViewController {
             svController.centerYAnchor.constraint(equalTo: view.centerYAnchor),
         ])
 
-        player = AVPlayer(playerItem: AVPlayerItem(url: folkObondoru!))
+        print("player.currentItem:", player.currentItem ?? "-")
+        print("player.status:", player.status)
+        print("player.rate:", player.rate)
+        print("player.defaultRate:", player.defaultRate)
+        print("player.automaticallyWaitsToMinimizeStalling:", player.automaticallyWaitsToMinimizeStalling)
+    }
+
+    @objc func pressPlayButton() {
+        player.play()
+    }
+    @objc func pressPauseButton() {
+        player.pause()
+    }
+    @objc func pressStopButton() {
+        player.replaceCurrentItem(with: nil)
     }
 }
