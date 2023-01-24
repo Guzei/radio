@@ -11,6 +11,7 @@ final class TabBarController: UITabBarController {
 
     let vcPlayer0 = Player0()
     let vcPlayer1 = Player1()
+    let vcPlayer2 = Player2()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +32,14 @@ final class TabBarController: UITabBarController {
             return nc
         }()
 
-        viewControllers = [ncPlayer0, ncPlayer1]
-        selectedIndex = 1
+        let ncPlayer2: UINavigationController = {
+            let nc = UINavigationController()
+            nc.setViewControllers([vcPlayer2], animated: true)
+            nc.tabBarItem = UITabBarItem(title: "Player2", image: UIImage(systemName: "radio"), tag: 0)
+            return nc
+        }()
+
+        viewControllers = [ncPlayer0, ncPlayer1, ncPlayer2]
+        selectedIndex = 2
     }
 }

@@ -15,6 +15,7 @@
 		4E435240297D887900AD89E4 /* Player1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E43523F297D887900AD89E4 /* Player1.swift */; };
 		4E435243297D8A0500AD89E4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E435242297D8A0500AD89E4 /* TabBarController.swift */; };
 		4E435245297E5C4000AD89E4 /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E435244297E5C4000AD89E4 /* temp.swift */; };
+		4E435247297E705D00AD89E4 /* Player2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E435246297E705D00AD89E4 /* Player2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		4E43523F297D887900AD89E4 /* Player1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player1.swift; sourceTree = "<group>"; };
 		4E435242297D8A0500AD89E4 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		4E435244297E5C4000AD89E4 /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
+		4E435246297E705D00AD89E4 /* Player2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				4E284FEC29798B8A002B9271 /* Player0.swift */,
 				4E43523F297D887900AD89E4 /* Player1.swift */,
+				4E435246297E705D00AD89E4 /* Player2.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			files = (
 				4E284FED29798B8A002B9271 /* Player0.swift in Sources */,
 				4E435240297D887900AD89E4 /* Player1.swift in Sources */,
+				4E435247297E705D00AD89E4 /* Player2.swift in Sources */,
 				4E284FE929798B8A002B9271 /* AppDelegate.swift in Sources */,
 				4E435243297D8A0500AD89E4 /* TabBarController.swift in Sources */,
 				4E284FEB29798B8A002B9271 /* SceneDelegate.swift in Sources */,
@@ -298,10 +302,13 @@
 				DEVELOPMENT_TEAM = 8LURC6MFX7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = radio/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Radio;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,10 +332,13 @@
 				DEVELOPMENT_TEAM = 8LURC6MFX7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = radio/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Radio;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
