@@ -29,8 +29,8 @@ class Player1: UIViewController {
     let rufm  = URL(string: "https://rufm.amgradio.ru/rufm")
     let synth = URL(string: "http://195.91.220.35:8005/live192")
 
-    var bfmItem: AVPlayerItem!
-    var rufmItem: AVPlayerItem!
+    var   bfmItem: AVPlayerItem!
+    var  rufmItem: AVPlayerItem!
     var synthItem: AVPlayerItem!
 
     var player = AVPlayer()

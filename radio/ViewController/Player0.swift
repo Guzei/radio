@@ -59,11 +59,11 @@ class Player0: UIViewController {
             svController.centerYAnchor.constraint(equalTo: view.centerYAnchor),
         ])
 
-        print("player.currentItem:", player.currentItem ?? "-")
-        print("player.status:", player.status)
-        print("player.rate:", player.rate)
-        print("player.defaultRate:", player.defaultRate)
-        print("player.automaticallyWaitsToMinimizeStalling:", player.automaticallyWaitsToMinimizeStalling)
+//        print("player.currentItem:", player.currentItem ?? "-")
+//        print("player.status:", player.status)
+//        print("player.rate:", player.rate)
+//        print("player.defaultRate:", player.defaultRate)
+//        print("player.automaticallyWaitsToMinimizeStalling:", player.automaticallyWaitsToMinimizeStalling)
     }
 
     @objc func pressPlayButton() {
