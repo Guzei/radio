@@ -16,7 +16,6 @@
 		4E435243297D8A0500AD89E4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E435242297D8A0500AD89E4 /* TabBarController.swift */; };
 		4E435245297E5C4000AD89E4 /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E435244297E5C4000AD89E4 /* temp.swift */; };
 		4E435247297E705D00AD89E4 /* Player2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E435246297E705D00AD89E4 /* Player2.swift */; };
-		4E7BCBBB298814E5000DF1C9 /* FPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7BCBBA298814E5000DF1C9 /* FPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +30,6 @@
 		4E435242297D8A0500AD89E4 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		4E435244297E5C4000AD89E4 /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
 		4E435246297E705D00AD89E4 /* Player2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player2.swift; sourceTree = "<group>"; };
-		4E7BCBBA298814E5000DF1C9 /* FPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +70,6 @@
 				4E284FF329798B8B002B9271 /* LaunchScreen.storyboard */,
 				4E284FF629798B8B002B9271 /* Info.plist */,
 				4E435244297E5C4000AD89E4 /* temp.swift */,
-				4E7BCBBA298814E5000DF1C9 /* FPlayer.swift */,
 			);
 			path = radio;
 			sourceTree = "<group>";
@@ -160,7 +157,6 @@
 				4E284FED29798B8A002B9271 /* Player0.swift in Sources */,
 				4E435240297D887900AD89E4 /* Player1.swift in Sources */,
 				4E435247297E705D00AD89E4 /* Player2.swift in Sources */,
-				4E7BCBBB298814E5000DF1C9 /* FPlayer.swift in Sources */,
 				4E284FE929798B8A002B9271 /* AppDelegate.swift in Sources */,
 				4E435243297D8A0500AD89E4 /* TabBarController.swift in Sources */,
 				4E284FEB29798B8A002B9271 /* SceneDelegate.swift in Sources */,
