@@ -10,11 +10,11 @@
 import UIKit
 import MediaPlayer
 
-class Player2: UIViewController {
+class Player2: UIViewController, AVPlayerItemMetadataOutputPushDelegate {
 
     private var player: AVPlayer?
     private var playerItem: AVPlayerItem?
-    var metadataOutput = AVPlayerItemMetadataOutput(identifiers: nil)
+    private var metadataOutput = AVPlayerItemMetadataOutput(identifiers: nil)
 
     private lazy var metaInfoLabel: UILabel = {
         $0.text = "meta info"
@@ -31,10 +31,6 @@ class Player2: UIViewController {
             metaInfoLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
         ])
 
-        // only https
-        let streams = ["https://rufm.amgradio.ru/rufm",
-                       "https://bfm.hostingradio.ru:8004/fm32",
-        ]
         let radioURL = URL(string: streams[0])
         let asset = AVURLAsset(url: radioURL!)
         playerItem = AVPlayerItem(asset: asset)
@@ -44,9 +40,7 @@ class Player2: UIViewController {
         player = AVPlayer(playerItem: playerItem)
         player?.play()
     }
-}
 
-extension Player2: AVPlayerItemMetadataOutputPushDelegate {
     public func metadataOutput(_ output: AVPlayerItemMetadataOutput, didOutputTimedMetadataGroups groups: [AVTimedMetadataGroup], from track: AVPlayerItemTrack?) {
         print(groups)
         let metaInfo = groups.first?.items.first?.value as? String ?? "no metadata"
