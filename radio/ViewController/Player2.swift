@@ -5,7 +5,7 @@
 //  Created by Igor Guzei on 23.01.2023.
 //
 
-// демонстрация получения метаданных
+// MVP for demonstration output metadata
 
 import UIKit
 import MediaPlayer
@@ -31,7 +31,10 @@ class Player2: UIViewController, AVPlayerItemMetadataOutputPushDelegate {
             metaInfoLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
         ])
 
-        let radioURL = URL(string: streams[0])
+        let random = (0..<streams.count).randomElement()!
+        print(random)
+        let radioURL = URL(string: streams[random])     //  or -- streams[0] -- manual radio station selection
+
         let asset = AVURLAsset(url: radioURL!)
         playerItem = AVPlayerItem(asset: asset)
         metadataOutput.setDelegate(self, queue: DispatchQueue.main)
@@ -41,10 +44,11 @@ class Player2: UIViewController, AVPlayerItemMetadataOutputPushDelegate {
         player?.play()
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        player?.replaceCurrentItem(with: nil)
+    }
+
     public func metadataOutput(_ output: AVPlayerItemMetadataOutput, didOutputTimedMetadataGroups groups: [AVTimedMetadataGroup], from track: AVPlayerItemTrack?) {
-        print(groups)
-        let metaInfo = groups.first?.items.first?.value as? String ?? "no metadata"
-        print(metaInfo)
-        metaInfoLabel.text = metaInfo
+        metaInfoLabel.text = groups.first?.items.first?.value as? String ?? "no metadata"
     }
 }
